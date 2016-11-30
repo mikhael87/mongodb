@@ -1,0 +1,5 @@
+mongoimport --username admin --password 'XXX' --host sub.server.com --port 27017 --db <dbname> --collection <collection_name> --type tsv "<ruta_nombre_archivo_con_extension>" --stopOnError --authenticationDatabase admin
+
+mongodump --host sub.server.com --port 27017 --username admin --password '<pass>' --collection <collection_name> --out </home/ruta/> --db <dbname> --query '<query>' --authenticationDatabase admin
+
+mongorestore --host sub.server.com --port 27017 --username admin --password '<pass>' --collection <collection_name> --db <dbname> --authenticationDatabase admin --noOptionsRestore </home/ruta/archivo.bson>
