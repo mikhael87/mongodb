@@ -1,0 +1,7 @@
+var cursor = db.collection.find();
+while (cursor.hasNext()) {
+  var x = cursor.next();
+  x['param1']['name'][0] = parseFloat(x['param1']['name'][0])
+  x['param1']['name'][1] = parseFloat(x['param1']['name'][1])
+  db.collection.update({_id : x._id}, x);
+}
