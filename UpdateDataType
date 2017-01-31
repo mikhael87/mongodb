@@ -1,7 +1,0 @@
-var cursor = db.getCollection('collection').find();
-while (cursor.hasNext()) {
-  var x = cursor.next();
-  x["campo"]["subcampo"]= parseInt(x["campo"]["subcampo"]);
-    
-  db.getCollection('collection').update({_id : x._id}, x);
-}
