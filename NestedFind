@@ -1,0 +1,17 @@
+db.Collection.find( {
+    $and : [
+        { 
+            field1 : NumberLong(1),
+            field2 : { 
+                $in : [ "value1", "value2" ] 
+            } 
+        },
+        { 
+            $or : 
+            [
+                { field1 : "value1", field3 : "value1" },
+                { field2 : "value1", field3 : "value1" }
+            ]
+        }
+    ]
+} )
