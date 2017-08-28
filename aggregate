@@ -1,0 +1,16 @@
+db.collection.aggregate([
+{
+  $match: {
+    campo1:{$gte:1488283200,$lte:1496165537},
+    campo2:'1790088464001'
+  }
+},
+{
+  $group: {
+      _id: {
+        "env_identificacion":'$env_identificacion',
+        "env_numeroContacto":'$env_numeroContacto'
+      },
+      count: {$sum: 1}}
+  }
+]);
